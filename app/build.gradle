@@ -1,0 +1,61 @@
+apply plugin: 'com.android.application'
+apply plugin: 'kotlin-android'
+apply plugin: 'kotlin-android-extensions'
+apply plugin: 'kotlin-kapt'
+
+
+android {
+    compileSdkVersion rootProject.ext.android.compileSdkVersion
+    buildToolsVersion rootProject.ext.android.buildToolsVersion
+    defaultConfig {
+        applicationId rootProject.ext.android.applicationId
+        minSdkVersion rootProject.ext.android.minSdkVersion
+        targetSdkVersion rootProject.ext.android.targetSdkVersion
+        versionCode rootProject.ext.android.versionCode
+        versionName rootProject.ext.android.versionName
+    }
+    buildTypes {
+        release {
+            minifyEnabled false
+            proguardFiles getDefaultProguardFile('proguard-android-optimize.txt'), 'proguard-rules.pro'
+        }
+    }
+    dataBinding {
+        enabled = true
+    }
+}
+
+dependencies {
+    implementation fileTree(dir: 'libs', include: ['*.jar'])
+    testImplementation rootProject.ext.dependence.libJunit
+    androidTestImplementation rootProject.ext.dependence.espresso
+
+//  support
+    implementation rootProject.ext.kotlin.libKotlin
+    implementation rootProject.ext.dependence.libSupportV7
+    implementation rootProject.ext.dependence.libSupportConstraintlayout
+    implementation rootProject.ext.dependence.libSupportRecycleView
+    implementation rootProject.ext.dependence.libSupportDesign
+
+//   dagger
+    implementation rootProject.ext.dependence.dagger
+    kapt rootProject.ext.dependence.daggerApt
+//    net
+    implementation rootProject.ext.dependence.retrofit
+    implementation rootProject.ext.dependence.okHttp
+    implementation rootProject.ext.dependence.gson
+    implementation rootProject.ext.dependence.rxJava
+    implementation rootProject.ext.dependence.gsonConverter
+// room
+    implementation rootProject.ext.dependence.room
+    kapt rootProject.ext.dependence.roomApt
+
+// data binding
+    annotationProcessor rootProject.ext.dependence.databindingApt
+
+// Architecture components
+    implementation rootProject.ext.dependence.lifecycleRuntime
+    implementation rootProject.ext.dependence.lifecycleRxtensions
+    kapt rootProject.ext.dependence.lifecycleApt
+    implementation rootProject.ext.dependence.paging
+}

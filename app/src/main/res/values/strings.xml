@@ -1,0 +1,5 @@
+<resources>
+    <string name="app_name">MyArchitecture</string>
+    <string name="position" translatable="false">position</string>
+
+</resources>
