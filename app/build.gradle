@@ -29,9 +29,11 @@ dependencies {
     implementation fileTree(dir: 'libs', include: ['*.jar'])
     testImplementation rootProject.ext.dependence.libJunit
     androidTestImplementation rootProject.ext.dependence.espresso
+//  kotlin
+    implementation rootProject.ext.dependence.libKotlin
+    implementation rootProject.ext.dependence.libKotlinCoroutines
 
 //  support
-    implementation rootProject.ext.kotlin.libKotlin
     implementation rootProject.ext.dependence.libSupportV7
     implementation rootProject.ext.dependence.libSupportConstraintlayout
     implementation rootProject.ext.dependence.libSupportRecycleView
