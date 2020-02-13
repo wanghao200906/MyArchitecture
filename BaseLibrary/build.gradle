@@ -1,0 +1,71 @@
+apply plugin: 'com.android.library'
+apply plugin: 'kotlin-android'
+apply plugin: 'kotlin-android-extensions'
+apply plugin: 'kotlin-kapt'
+
+android {
+    compileSdkVersion 29
+    buildToolsVersion "29.0.1"
+
+
+    defaultConfig {
+        minSdkVersion 19
+        targetSdkVersion 29
+        versionCode 1
+        versionName "1.0"
+
+        testInstrumentationRunner "androidx.test.runner.AndroidJUnitRunner"
+        consumerProguardFiles 'consumer-rules.pro'
+    }
+
+    buildTypes {
+        release {
+            minifyEnabled false
+            proguardFiles getDefaultProguardFile('proguard-android-optimize.txt'), 'proguard-rules.pro'
+        }
+    }
+
+}
+
+dependencies {
+    implementation fileTree(dir: 'libs', include: ['*.jar'])
+//    test
+    testImplementation rootProject.ext.dependence.libJunit
+    androidTestImplementation rootProject.ext.dependence.espresso
+    androidTestImplementation rootProject.ext.dependence.libSupportJunit
+//  kotlin
+    api rootProject.ext.dependence.libKotlin
+
+//  support
+    api rootProject.ext.dependence.libSupportV7
+    api rootProject.ext.dependence.libSupportConstraintlayout
+    api rootProject.ext.dependence.libSupportRecycleView
+    api rootProject.ext.dependence.libSupportDesign
+
+//   dagger
+    api rootProject.ext.dependence.dagger
+    kapt rootProject.ext.dependence.daggerApt
+//    net
+    api rootProject.ext.dependence.retrofit
+    api rootProject.ext.dependence.okHttp
+    api rootProject.ext.dependence.gson
+    api rootProject.ext.dependence.rxJava
+    api rootProject.ext.dependence.gsonConverter
+// room
+    api rootProject.ext.dependence.room
+    kapt rootProject.ext.dependence.roomApt
+
+// data binding
+//    api rootProject.ext.dependence.databindingApt
+
+// Architecture components
+    api rootProject.ext.dependence.lifecycleRuntime
+    api rootProject.ext.dependence.lifecycleRxtensions
+    kapt rootProject.ext.dependence.lifecycleApt
+    api rootProject.ext.dependence.paging
+    //ARouter
+//    api rootProject.ext.dependence.arouter
+    // Anko Commons
+    api rootProject.ext.dependence.ankoCommons
+    api rootProject.ext.dependence.ankoV4
+}

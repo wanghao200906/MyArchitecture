@@ -1,5 +1,6 @@
 package com.architecture.view.recycleview
 
+import android.annotation.SuppressLint
 import android.arch.paging.PagedList
 import android.arch.paging.PagedListAdapter
 import android.databinding.ViewDataBinding
@@ -49,6 +50,7 @@ abstract class BasePagedListAdapter(diffCallback: DiffUtil.ItemCallback<BaseEnti
              * Note that in kotlin, == checking on data classes compares all contents, but in Java,
              * typically you'll implement Object#equals, and use it to compare object contents.
              */
+            @SuppressLint("DiffUtilEquals")
             override fun areContentsTheSame(oldItem: BaseEntity, newItem: BaseEntity) = oldItem == newItem
         }
     }

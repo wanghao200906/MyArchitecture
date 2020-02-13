@@ -18,6 +18,7 @@ class App : Application(), LifecycleObserver {
     override fun onCreate() {
         super.onCreate()
         ProcessLifecycleOwner.get().lifecycle.addObserver(this)
+
     }
 
     @OnLifecycleEvent(Lifecycle.Event.ON_CREATE)

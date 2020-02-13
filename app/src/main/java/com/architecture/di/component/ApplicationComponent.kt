@@ -4,7 +4,6 @@ import android.content.Context
 import android.content.SharedPreferences
 import com.architecture.App
 import com.architecture.di.module.ApplicationModule
-import com.architecture.di.module.DatabaseModule
 import com.architecture.di.module.NetModule
 import com.architecture.ui.activity.main.MainActivity
 import com.architecture.ui.activity.main.MainActivityViewModel
@@ -16,7 +15,9 @@ import javax.inject.Singleton
  */
 
 @Singleton
-@Component(modules = [ApplicationModule::class, NetModule::class, DatabaseModule::class])
+@Component(modules = [ApplicationModule::class, NetModule::class
+//    , DatabaseModule::class
+])
 interface ApplicationComponent {
 
     object Initializer {

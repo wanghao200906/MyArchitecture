@@ -2,7 +2,6 @@ package com.architecture.ui.activity.main
 
 import com.architecture.R
 import com.architecture.base.BaseActivity
-import com.architecture.databinding.ActivityMainBinding
 
 /**
  * Created by Sven.Wong on 2020-02-10

@@ -29,35 +29,20 @@ dependencies {
     implementation fileTree(dir: 'libs', include: ['*.jar'])
     testImplementation rootProject.ext.dependence.libJunit
     androidTestImplementation rootProject.ext.dependence.espresso
-//  kotlin
-    implementation rootProject.ext.dependence.libKotlin
-    implementation rootProject.ext.dependence.libKotlinCoroutines
+    androidTestImplementation rootProject.ext.dependence.libSupportJunit
 
-//  support
-    implementation rootProject.ext.dependence.libSupportV7
-    implementation rootProject.ext.dependence.libSupportConstraintlayout
-    implementation rootProject.ext.dependence.libSupportRecycleView
-    implementation rootProject.ext.dependence.libSupportDesign
-
-//   dagger
-    implementation rootProject.ext.dependence.dagger
+    //Dagger2
     kapt rootProject.ext.dependence.daggerApt
-//    net
-    implementation rootProject.ext.dependence.retrofit
-    implementation rootProject.ext.dependence.okHttp
-    implementation rootProject.ext.dependence.gson
-    implementation rootProject.ext.dependence.rxJava
-    implementation rootProject.ext.dependence.gsonConverter
-// room
-    implementation rootProject.ext.dependence.room
-    kapt rootProject.ext.dependence.roomApt
+    //ARouter
+//    kapt rootProject.ext.dependence.arouterApt
+    kapt rootProject.ext.dependence.databindingApt
 
-// data binding
-    annotationProcessor rootProject.ext.dependence.databindingApt
-
-// Architecture components
-    implementation rootProject.ext.dependence.lifecycleRuntime
-    implementation rootProject.ext.dependence.lifecycleRxtensions
-    kapt rootProject.ext.dependence.lifecycleApt
-    implementation rootProject.ext.dependence.paging
+    if (isUserModule.toBoolean()){
+        compile project(path: ':UserCenter')
+    }
+//    implementation project(path: ':MessageCenter')
+//    implementation project(path: ':GoodsCenter')
+//    implementation project(path: ':OrderCenter')
+//    implementation project(path: ':PaySDK')
+    implementation project(path: ':Provider')
 }
