@@ -4,18 +4,16 @@ apply plugin: 'kotlin-android-extensions'
 apply plugin: 'kotlin-kapt'
 
 android {
-    compileSdkVersion 29
-    buildToolsVersion "29.0.1"
+
+    compileSdkVersion rootProject.ext.android.compileSdkVersion
+    buildToolsVersion rootProject.ext.android.buildToolsVersion
 
 
     defaultConfig {
-        minSdkVersion 19
-        targetSdkVersion 29
-        versionCode 1
-        versionName "1.0"
-
-        testInstrumentationRunner "androidx.test.runner.AndroidJUnitRunner"
-        consumerProguardFiles 'consumer-rules.pro'
+        minSdkVersion rootProject.ext.android.minSdkVersion
+        targetSdkVersion rootProject.ext.android.targetSdkVersion
+        versionCode rootProject.ext.android.versionCode
+        versionName rootProject.ext.android.versionName
     }
 
     buildTypes {
@@ -34,38 +32,81 @@ dependencies {
     androidTestImplementation rootProject.ext.dependence.espresso
     androidTestImplementation rootProject.ext.dependence.libSupportJunit
 //  kotlin
-    api rootProject.ext.dependence.libKotlin
-
+    api "org.jetbrains.kotlin:kotlin-stdlib-jdk7:$libVersion.kt_version"
 //  support
-    api rootProject.ext.dependence.libSupportV7
-    api rootProject.ext.dependence.libSupportConstraintlayout
-    api rootProject.ext.dependence.libSupportRecycleView
-    api rootProject.ext.dependence.libSupportDesign
+    api "com.android.support:support-v4:$libVersion.support_version"
+    api "com.android.support:cardview-v7:$libVersion.support_version"
+    api "com.android.support:recyclerview-v7:$libVersion.support_version"
+    api "com.android.support:appcompat-v7:$libVersion.support_version"
+    api "com.android.support:design:$libVersion.support_version"
+    api "com.android.support.constraint:constraint-layout:$libVersion.constraintly_version"
 
 //   dagger
-    api rootProject.ext.dependence.dagger
-    kapt rootProject.ext.dependence.daggerApt
+//    api rootProject.ext.dependence.dagger
+//    kapt rootProject.ext.dependence.daggerApt
+    //dagger
+    api "com.google.dagger:dagger-android:$libVersion.dagger_version"
+    kapt "com.google.dagger:dagger-compiler:$libVersion.dagger_version"
 //    net
-    api rootProject.ext.dependence.retrofit
-    api rootProject.ext.dependence.okHttp
-    api rootProject.ext.dependence.gson
-    api rootProject.ext.dependence.rxJava
-    api rootProject.ext.dependence.gsonConverter
+    api "com.squareup.retrofit2:retrofit:$libVersion.retrofit_version"
+    api "com.squareup.retrofit2:adapter-rxjava2:$libVersion.retrofit_version"
+    api "com.squareup.retrofit2:converter-gson:$libVersion.retrofit_version"
+    api "com.squareup.okhttp3:okhttp:$libVersion.okHttp_version"
+    api "com.squareup.okhttp3:logging-interceptor:$libVersion.okHttp_version"
+    api "com.google.code.gson:gson:$libVersion.gson_version"
+
+
 // room
     api rootProject.ext.dependence.room
     kapt rootProject.ext.dependence.roomApt
-
-// data binding
-//    api rootProject.ext.dependence.databindingApt
 
 // Architecture components
     api rootProject.ext.dependence.lifecycleRuntime
     api rootProject.ext.dependence.lifecycleRxtensions
     kapt rootProject.ext.dependence.lifecycleApt
     api rootProject.ext.dependence.paging
-    //ARouter
-//    api rootProject.ext.dependence.arouter
+
     // Anko Commons
-    api rootProject.ext.dependence.ankoCommons
-    api rootProject.ext.dependence.ankoV4
+    api "org.jetbrains.anko:anko-commons:$libVersion.ankoVersion"
+    api "org.jetbrains.anko:anko-support-v4-commons:$libVersion.ankoVersion"
+    //Rx
+    api "io.reactivex.rxjava2:rxkotlin:$libVersion.rx_kotlin_version"
+    api "io.reactivex.rxjava2:rxandroid:$libVersion.rx_android_version"
+    api "io.reactivex.rxjava2:rxjava:$libVersion.rx_java_version"
+//    api "com.trello.rxlifecycle3:rxlifecycle-kotlin:$libVersion.rx_lifecycle_version"
+//    api "com.trello.rxlifecycle3:rxlifecycle-components:$libVersion.rx_lifecycle_version"
+//    Glide
+    api "com.github.bumptech.glide:glide:$libVersion.glide_version"
+//    kapt "com.github.bumptech.glide:compiler:$libVersion.glide_version"
+
+    //Circle ImageView
+    api "de.hdodenhof:circleimageview:$libVersion.circle_imageView_version"
+    //Take Photo
+    api "com.jph.takephoto:takephoto_library:$libVersion.take_photo_version"
+    //Alert View
+    api "com.bigkoo:alertview:$libVersion.alert_view_version"
+    //七牛
+    api 'com.qiniu:qiniu-android-sdk:7.3.+'
+    //底部导航
+    api 'com.ashokvarma.android:bottom-navigation-bar:2.0.2'
+    //Banner
+    api 'com.youth.banner:banner:1.4.10'  //最新版本
+    //标签
+    api 'com.github.shts:TriangleLabelView:1.1.2'
+    //画廊
+    api 'com.github.crosswall:Android-Coverflow:release-v1.0.4'
+    //MulitStateView
+    api "com.github.Kennyc1012:MultiStateView:$libVersion.multi_state_view_version"
+    //上下拉刷新
+    api 'cn.bingoogolapple:bga-refreshlayout:1.1.7@aar'
+    //Kotlin Bus
+    api 'com.eightbitlab:rxbus:1.0.2'
+    //FlowLayout
+    api 'com.zhy:flowlayout-lib:1.0.3'
+    //ARouter
+    api "com.alibaba:arouter-api:$libVersion.arouter_api_version"
+    //BadgeView
+    api 'q.rorbin:badgeview:1.1.2'
+
+
 }

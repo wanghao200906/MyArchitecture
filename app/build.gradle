@@ -3,6 +3,11 @@ apply plugin: 'kotlin-android'
 apply plugin: 'kotlin-android-extensions'
 apply plugin: 'kotlin-kapt'
 
+kapt {
+    arguments {
+        arg("moduleName", project.getName())
+    }
+}
 
 android {
     compileSdkVersion rootProject.ext.android.compileSdkVersion
@@ -13,6 +18,10 @@ android {
         targetSdkVersion rootProject.ext.android.targetSdkVersion
         versionCode rootProject.ext.android.versionCode
         versionName rootProject.ext.android.versionName
+        multiDexEnabled true
+        manifestPlaceholders = [
+                JPUSH_PKGNAME: applicationId
+        ]
     }
     buildTypes {
         release {
@@ -30,19 +39,17 @@ dependencies {
     testImplementation rootProject.ext.dependence.libJunit
     androidTestImplementation rootProject.ext.dependence.espresso
     androidTestImplementation rootProject.ext.dependence.libSupportJunit
-
-    //Dagger2
-    kapt rootProject.ext.dependence.daggerApt
     //ARouter
-//    kapt rootProject.ext.dependence.arouterApt
-    kapt rootProject.ext.dependence.databindingApt
+    kapt "com.alibaba:arouter-compiler:$libVersion.arouter_compiler_version"
 
-    if (isUserModule.toBoolean()){
-        compile project(path: ':UserCenter')
+    kapt "com.google.dagger:dagger-compiler:$libVersion.dagger_version"
+
+    if (isUserModule.toBoolean()) {
+        implementation project(path: ':UserCenter')
     }
-//    implementation project(path: ':MessageCenter')
-//    implementation project(path: ':GoodsCenter')
-//    implementation project(path: ':OrderCenter')
-//    implementation project(path: ':PaySDK')
+    implementation project(path: ':MessageCenter')
+    implementation project(path: ':GoodsCenter')
+    implementation project(path: ':OrderCenter')
     implementation project(path: ':Provider')
+    implementation project(path: ':PaySdk')
 }

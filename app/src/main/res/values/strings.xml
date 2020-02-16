@@ -1,5 +1,4 @@
 <resources>
-    <string name="app_name">MyArchitecture</string>
-    <string name="position" translatable="false">position</string>
-
+    <string name="app_name">KotlinMall</string>
+    <string name="un_login_text">登录/注册</string>
 </resources>

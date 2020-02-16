@@ -10,11 +10,11 @@
             android:supportsRtl="true">
 
 
-        <activity android:name=".ui.activity.RegisterActivity"/>
-        <activity android:name=".ui.activity.LoginActivity"/>
-        <activity android:name=".ui.activity.ForgetPwdActivity"/>
-        <activity android:name=".ui.activity.ResetPwdActivity"/>
-        <activity android:name=".ui.activity.UserInfoActivity"/>
+        <activity android:name="com.architecture.usercenter.ui.activity.RegisterActivity"/>
+        <activity android:name="com.architecture.usercenter.ui.activity.LoginActivity"/>
+        <activity android:name="com.architecture.usercenter.ui.activity.ForgetPwdActivity"/>
+        <activity android:name="com.architecture.usercenter.ui.activity.ResetPwdActivity"/>
+        <activity android:name="com.architecture.usercenter.ui.activity.UserInfoActivity"/>
     </application>
 
 </manifest>

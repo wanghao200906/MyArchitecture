@@ -1,3 +1,2 @@
-include ':app', ':BaseLibrary', ':Provider',  ':UserCenter'
-//,':GoodsCenter', ':OrderCenter', ':PaySdk', ':MessageCenter'
-rootProject.name='MyArchitecture'
+include ':app', ':BaseLibrary', ':Provider', ':UserCenter', ':GoodsCenter', ':MessageCenter', ':OrderCenter', ':PaySdk'
+rootProject.name = 'MyArchitecture'
