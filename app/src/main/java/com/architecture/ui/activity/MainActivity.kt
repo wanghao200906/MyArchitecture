@@ -16,7 +16,7 @@ import com.architecture.ui.fragment.MeFragment
 import com.ashokvarma.bottomnavigation.BottomNavigationBar
 import com.eightbitlab.rxbus.Bus
 import com.eightbitlab.rxbus.registerInBus
-import com.kotlin.provider.event.MessageBadgeEvent
+import com.architecture.provider.event.MessageBadgeEvent
 import kotlinx.android.synthetic.main.activity_main.*
 import org.jetbrains.anko.toast
 import java.util.*

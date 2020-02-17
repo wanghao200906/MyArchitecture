@@ -14,11 +14,11 @@ import com.architecture.ordercenter.common.OrderConstant
 import com.architecture.ordercenter.common.OrderStatus
 import com.architecture.ordercenter.ui.activity.OrderActivity
 import com.architecture.ordercenter.ui.activity.ShipAddressActivity
+import com.architecture.provider.common.ProviderConstant
+import com.architecture.provider.common.afterLogin
+import com.architecture.provider.common.isLogined
 import com.architecture.ui.activity.SettingActivity
 import com.architecture.usercenter.ui.activity.UserInfoActivity
-import com.kotlin.provider.common.ProviderConstant
-import com.kotlin.provider.common.afterLogin
-import com.kotlin.provider.common.isLogined
 import kotlinx.android.synthetic.main.fragment_me.*
 import org.jetbrains.anko.support.v4.startActivity
 import org.jetbrains.anko.support.v4.toast

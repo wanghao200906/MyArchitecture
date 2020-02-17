@@ -1,6 +1,6 @@
 package com.architecture.common
 
-//import cn.jpush.android.api.JPushInterface
+import cn.jpush.android.api.JPushInterface
 import com.architecture.baselibrary.common.BaseApplication
 
 /*
@@ -11,8 +11,8 @@ class MainApplication: BaseApplication() {
         super.onCreate()
 
         //极光推送初始化
-//        JPushInterface.setDebugMode(true)
-//        JPushInterface.init(this)
+        JPushInterface.setDebugMode(true)
+        JPushInterface.init(this)
     }
 }
 
