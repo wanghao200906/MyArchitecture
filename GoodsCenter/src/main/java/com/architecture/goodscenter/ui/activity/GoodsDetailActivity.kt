@@ -13,7 +13,7 @@ import com.architecture.goodscenter.event.UpdateCartSizeEvent
 import com.architecture.goodscenter.ui.adapter.GoodsDetailVpAdapter
 import com.eightbitlab.rxbus.Bus
 import com.eightbitlab.rxbus.registerInBus
-import com.kotlin.provider.common.afterLogin
+import com.architecture.provider.common.afterLogin
 import kotlinx.android.synthetic.main.activity_goods_detail.*
 import org.jetbrains.anko.startActivity
 import q.rorbin.badgeview.QBadgeView

@@ -4,7 +4,7 @@ import android.content.Context
 import android.content.SharedPreferences
 import android.content.SharedPreferences.Editor
 import com.architecture.baselibrary.common.BaseApplication
-import com.kotlin.base.common.BaseConstant
+import com.architecture.baselibrary.common.BaseConstant
 
 /*
     SP工具类

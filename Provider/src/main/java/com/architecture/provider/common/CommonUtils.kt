@@ -1,8 +1,9 @@
-package com.kotlin.provider.common
+package com.architecture.provider.common
 
-//import com.alibaba.android.arouter.launcher.ARouter
+import com.alibaba.android.arouter.launcher.ARouter
+import com.architecture.baselibrary.common.BaseConstant
 import com.architecture.baselibrary.utils.AppPrefsUtils
-import com.kotlin.base.common.BaseConstant
+import com.architecture.provider.router.RouterPath
 
 /*
     顶级函数，判断是否登录
@@ -19,6 +20,6 @@ fun afterLogin(method:()->Unit){
     if (isLogined()){
         method()
     }else{
-//        ARouter.getInstance().build(RouterPath.UserCenter.PATH_LOGIN).navigation()
+        ARouter.getInstance().build(RouterPath.UserCenter.PATH_LOGIN).navigation()
     }
 }

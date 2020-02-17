@@ -2,6 +2,7 @@ package com.architecture.baselibrary.common
 
 import android.app.Application
 import android.content.Context
+import com.alibaba.android.arouter.launcher.ARouter
 import com.architecture.baselibrary.injection.component.AppComponent
 import com.architecture.baselibrary.injection.component.DaggerAppComponent
 import com.architecture.baselibrary.injection.module.AppModule
@@ -21,9 +22,9 @@ open class BaseApplication : Application() {
         context = this
 
         //ARouter初始化
-//        ARouter.openLog()    // 打印日志
-//        ARouter.openDebug()
-//        ARouter.init(this)
+        ARouter.openLog()    // 打印日志
+        ARouter.openDebug()
+        ARouter.init(this)
     }
 
     /*

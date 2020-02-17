@@ -1,4 +1,4 @@
-package com.kotlin.provider.router
+package com.architecture.provider.router
 
 /*
     模块路由 路径定义

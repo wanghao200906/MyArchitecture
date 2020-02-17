@@ -7,15 +7,15 @@ import com.alibaba.android.arouter.facade.annotation.Route
 import com.architecture.baselibrary.ext.enable
 import com.architecture.baselibrary.ext.onClick
 import com.architecture.baselibrary.ui.activity.BaseMvpActivity
+import com.architecture.provider.PushProvider
+import com.architecture.provider.router.RouterPath
+import com.architecture.usercenter.R
 import com.architecture.usercenter.data.protocol.UserInfo
 import com.architecture.usercenter.injection.component.DaggerUserComponent
 import com.architecture.usercenter.injection.module.UserModule
 import com.architecture.usercenter.presenter.LoginPresenter
 import com.architecture.usercenter.presenter.view.LoginView
 import com.architecture.usercenter.utils.UserPrefsUtils
-import com.kotlin.provider.PushProvider
-import com.kotlin.provider.router.RouterPath
-import com.kotlin.user.R
 import kotlinx.android.synthetic.main.activity_login.*
 import org.jetbrains.anko.startActivity
 import org.jetbrains.anko.toast
@@ -68,7 +68,8 @@ class LoginActivity : BaseMvpActivity<LoginPresenter>(), LoginView, View.OnClick
             R.id.mRightTv -> {startActivity<RegisterActivity1>()}
 
             R.id.mLoginBtn -> {
-                mPresenter.login(mMobileEt.text.toString(),mPwdEt.text.toString(),mPushProvider?.getPushId()?:"")
+                mPresenter.login(mMobileEt.text.toString(),mPwdEt.text.toString(),
+                    mPushProvider?.getPushId()?:"")
             }
             R.id.mForgetPwdTv ->{
                 startActivity<ForgetPwdActivity>()

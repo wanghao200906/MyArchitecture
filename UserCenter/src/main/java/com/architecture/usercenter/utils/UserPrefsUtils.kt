@@ -1,9 +1,9 @@
 package com.architecture.usercenter.utils
 
 import com.architecture.usercenter.data.protocol.UserInfo
-import com.kotlin.base.common.BaseConstant
+import com.architecture.baselibrary.common.BaseConstant
 import com.architecture.baselibrary.utils.AppPrefsUtils
-import com.kotlin.provider.common.ProviderConstant
+import com.architecture.provider.common.ProviderConstant
 
 /*
     本地存储用户相关信息

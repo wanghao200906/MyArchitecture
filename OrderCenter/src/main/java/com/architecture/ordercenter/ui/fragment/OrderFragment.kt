@@ -19,11 +19,11 @@ import com.architecture.ordercenter.presenter.OrderListPresenter
 import com.architecture.ordercenter.presenter.view.OrderListView
 import com.architecture.ordercenter.ui.activity.OrderDetailActivity
 import com.architecture.ordercenter.ui.adapter.OrderAdapter
+import com.architecture.provider.common.ProviderConstant
+import com.architecture.provider.router.RouterPath
 import com.bigkoo.alertview.AlertView
 import com.bigkoo.alertview.OnItemClickListener
 import com.kennyc.view.MultiStateView
-import com.kotlin.provider.common.ProviderConstant
-import com.kotlin.provider.router.RouterPath
 import kotlinx.android.synthetic.main.fragment_order.*
 import org.jetbrains.anko.support.v4.toast
 

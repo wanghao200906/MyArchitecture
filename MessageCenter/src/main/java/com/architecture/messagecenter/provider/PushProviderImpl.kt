@@ -3,8 +3,8 @@ package com.architecture.messagecenter.provider
 import android.content.Context
 import cn.jpush.android.api.JPushInterface
 import com.alibaba.android.arouter.facade.annotation.Route
-import com.kotlin.provider.PushProvider
-import com.kotlin.provider.router.RouterPath
+import com.architecture.provider.PushProvider
+import com.architecture.provider.router.RouterPath
 
 /*
     模块间接口调用

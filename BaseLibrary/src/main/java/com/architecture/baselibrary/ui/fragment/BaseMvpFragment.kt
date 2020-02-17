@@ -1,6 +1,7 @@
 package com.architecture.baselibrary.ui.fragment
 
 import android.app.Activity
+import android.content.Context
 import android.os.Bundle
 import android.view.LayoutInflater
 import android.view.View
@@ -27,13 +28,23 @@ abstract open class BaseMvpFragment<T : BasePresenter<*>> : BaseFragment(), Base
 
     private lateinit var mLoadingDialog: ProgressLoading
 
+    override fun onAttach(context: Context?) {
+        initActivityInjection()
+        injectComponent()
+        super.onAttach(context)
+    }
+
+    override fun onViewCreated(view: View, savedInstanceState: Bundle?) {
+        super.onViewCreated(view, savedInstanceState)
+        //初始加载框
+        mLoadingDialog = ProgressLoading.create(context!!)
+    }
     override fun onCreateView(
         inflater: LayoutInflater,
         container: ViewGroup?,
         savedInstanceState: Bundle?
     ): View? {
-        //初始加载框
-        mLoadingDialog = ProgressLoading.create(context!!)
+
         return super.onCreateView(inflater, container, savedInstanceState)
 
     }

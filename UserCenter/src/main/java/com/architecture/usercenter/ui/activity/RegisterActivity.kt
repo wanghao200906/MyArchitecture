@@ -5,11 +5,11 @@ import android.view.View
 import com.architecture.baselibrary.ext.enable
 import com.architecture.baselibrary.ext.onClick
 import com.architecture.baselibrary.ui.activity.BaseMvpActivity
+import com.architecture.usercenter.R
 import com.architecture.usercenter.injection.component.DaggerUserComponent
 import com.architecture.usercenter.injection.module.UserModule
 import com.architecture.usercenter.presenter.RegisterPresenter
 import com.architecture.usercenter.presenter.view.RegisterView
-import com.kotlin.user.R
 import kotlinx.android.synthetic.main.activity_register.*
 import org.jetbrains.anko.toast
 

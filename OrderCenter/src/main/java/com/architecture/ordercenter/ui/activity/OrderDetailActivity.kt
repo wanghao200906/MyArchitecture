@@ -12,8 +12,8 @@ import com.architecture.ordercenter.injection.module.OrderModule
 import com.architecture.ordercenter.presenter.OrderDetailPresenter
 import com.architecture.ordercenter.presenter.view.OrderDetailView
 import com.architecture.ordercenter.ui.adapter.OrderGoodsAdapter
-import com.kotlin.provider.common.ProviderConstant
-import com.kotlin.provider.router.RouterPath
+import com.architecture.provider.common.ProviderConstant
+import com.architecture.provider.router.RouterPath
 import kotlinx.android.synthetic.main.activity_order_detail.*
 
 /*

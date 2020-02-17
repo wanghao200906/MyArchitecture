@@ -4,11 +4,11 @@ import android.os.Bundle
 import com.architecture.baselibrary.ext.enable
 import com.architecture.baselibrary.ext.onClick
 import com.architecture.baselibrary.ui.activity.BaseMvpActivity
+import com.architecture.usercenter.R
 import com.architecture.usercenter.injection.component.DaggerUserComponent
 import com.architecture.usercenter.injection.module.UserModule
 import com.architecture.usercenter.presenter.ResetPwdPresenter
 import com.architecture.usercenter.presenter.view.ResetPwdView
-import com.kotlin.user.R
 import kotlinx.android.synthetic.main.activity_reset_pwd.*
 import org.jetbrains.anko.clearTop
 import org.jetbrains.anko.intentFor

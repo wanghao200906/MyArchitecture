@@ -13,9 +13,9 @@ import com.architecture.usercenter.presenter.UserInfoPresenter
 import com.architecture.usercenter.presenter.view.UserInfoView
 import com.architecture.usercenter.utils.UserPrefsUtils
 import com.jph.takephoto.model.TResult
-import com.kotlin.base.common.BaseConstant
-import com.kotlin.provider.common.ProviderConstant
-import com.kotlin.user.R
+import com.architecture.baselibrary.common.BaseConstant
+import com.architecture.provider.common.ProviderConstant
+import com.architecture.usercenter.R
 import com.qiniu.android.http.ResponseInfo
 import com.qiniu.android.storage.UpCompletionHandler
 import com.qiniu.android.storage.UploadManager

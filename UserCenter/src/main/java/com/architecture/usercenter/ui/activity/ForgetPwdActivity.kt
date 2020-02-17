@@ -5,11 +5,11 @@ import android.view.View
 import com.architecture.baselibrary.ext.enable
 import com.architecture.baselibrary.ext.onClick
 import com.architecture.baselibrary.ui.activity.BaseMvpActivity
+import com.architecture.usercenter.R
 import com.architecture.usercenter.injection.component.DaggerUserComponent
 import com.architecture.usercenter.injection.module.UserModule
 import com.architecture.usercenter.presenter.ForgetPwdPresenter
 import com.architecture.usercenter.presenter.view.ForgetPwdView
-import com.kotlin.user.R
 import kotlinx.android.synthetic.main.activity_forget_pwd.*
 import org.jetbrains.anko.startActivity
 import org.jetbrains.anko.toast
@@ -53,7 +53,7 @@ class ForgetPwdActivity : BaseMvpActivity<ForgetPwdPresenter>(), ForgetPwdView, 
     override fun onClick(view: View) {
         when(view.id){
             R.id.mVerifyCodeBtn -> {
-//                mVerifyCodeBtn.requestSendVerifyNumber()
+                mVerifyCodeBtn.requestSendVerifyNumber()
                 toast("发送验证成功")
             }
 

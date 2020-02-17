@@ -1,4 +1,4 @@
-package com.kotlin.provider.event
+package com.architecture.provider.event
 
 /*
     消息标签是否显示事件

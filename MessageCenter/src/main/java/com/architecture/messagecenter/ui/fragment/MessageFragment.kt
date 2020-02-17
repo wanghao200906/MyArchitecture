@@ -14,9 +14,9 @@ import com.architecture.messagecenter.injection.module.MessageModule
 import com.architecture.messagecenter.presenter.MessagePresenter
 import com.architecture.messagecenter.presenter.view.MessageView
 import com.architecture.messagecenter.ui.adapter.MessageAdapter
+import com.architecture.provider.event.MessageBadgeEvent
 import com.eightbitlab.rxbus.Bus
 import com.kennyc.view.MultiStateView
-import com.kotlin.provider.event.MessageBadgeEvent
 import kotlinx.android.synthetic.main.fragment_message.*
 
 /*

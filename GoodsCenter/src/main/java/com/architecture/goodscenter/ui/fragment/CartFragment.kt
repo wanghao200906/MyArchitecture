@@ -23,11 +23,11 @@ import com.architecture.goodscenter.injection.module.CartModule
 import com.architecture.goodscenter.presenter.CartListPresenter
 import com.architecture.goodscenter.presenter.view.CartListView
 import com.architecture.goodscenter.ui.adapter.CartGoodsAdapter
+import com.architecture.provider.common.ProviderConstant
+import com.architecture.provider.router.RouterPath
 import com.eightbitlab.rxbus.Bus
 import com.eightbitlab.rxbus.registerInBus
 import com.kennyc.view.MultiStateView
-import com.kotlin.provider.common.ProviderConstant
-import com.kotlin.provider.router.RouterPath
 import kotlinx.android.synthetic.main.fragment_cart.*
 import org.jetbrains.anko.support.v4.toast
 

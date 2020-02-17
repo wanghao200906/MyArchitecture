@@ -1,6 +1,6 @@
 package com.architecture.baselibrary.data.net
 
-import com.kotlin.base.common.BaseConstant
+import com.architecture.baselibrary.common.BaseConstant
 import com.architecture.baselibrary.utils.AppPrefsUtils
 import okhttp3.Interceptor
 import okhttp3.OkHttpClient

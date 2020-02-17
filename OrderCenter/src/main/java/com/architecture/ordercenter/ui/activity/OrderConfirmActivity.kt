@@ -17,10 +17,10 @@ import com.architecture.ordercenter.injection.module.OrderModule
 import com.architecture.ordercenter.presenter.OrderConfirmPresenter
 import com.architecture.ordercenter.presenter.view.OrderConfirmView
 import com.architecture.ordercenter.ui.adapter.OrderGoodsAdapter
+import com.architecture.provider.common.ProviderConstant
+import com.architecture.provider.router.RouterPath
 import com.eightbitlab.rxbus.Bus
 import com.eightbitlab.rxbus.registerInBus
-import com.kotlin.provider.common.ProviderConstant
-import com.kotlin.provider.router.RouterPath
 import kotlinx.android.synthetic.main.activity_order_confirm.*
 import org.jetbrains.anko.startActivity
 import org.jetbrains.anko.toast

@@ -19,7 +19,7 @@
                 <action android:name="cn.jpush.android.intent.NOTIFICATION_CLICK_ACTION" />
                 <action android:name="cn.jpush.android.intent.CONNECTION" />
 
-                <category android:name="com.kotlin.mall" />
+                <category android:name="com.architecture.messagecente" />
             </intent-filter>
         </receiver>
 

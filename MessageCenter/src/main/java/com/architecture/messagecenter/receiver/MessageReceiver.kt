@@ -6,10 +6,10 @@ import android.content.Intent
 import android.util.Log
 import cn.jpush.android.api.JPushInterface
 import com.alibaba.android.arouter.launcher.ARouter
+import com.architecture.provider.common.ProviderConstant
+import com.architecture.provider.event.MessageBadgeEvent
+import com.architecture.provider.router.RouterPath
 import com.eightbitlab.rxbus.Bus
-import com.kotlin.provider.common.ProviderConstant
-import com.kotlin.provider.event.MessageBadgeEvent
-import com.kotlin.provider.router.RouterPath
 import org.json.JSONObject
 
 

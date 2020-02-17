@@ -14,8 +14,8 @@ import com.architecture.paysdk.injection.component.DaggerPayComponent
 import com.architecture.paysdk.injection.module.PayModule
 import com.architecture.paysdk.presenter.PayPresenter
 import com.architecture.paysdk.presenter.view.PayView
-import com.kotlin.provider.common.ProviderConstant
-import com.kotlin.provider.router.RouterPath
+import com.architecture.provider.common.ProviderConstant
+import com.architecture.provider.router.RouterPath
 import kotlinx.android.synthetic.main.activity_cash_register.*
 import org.jetbrains.anko.doAsync
 import org.jetbrains.anko.toast
